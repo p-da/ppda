@@ -3,96 +3,677 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darul Abror</title>
-    <meta http-equiv="refresh" content="1.5; url=https://quiet-bubblegum-53d1b5.netlify.app/">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .splash {
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Container untuk logo dan loading */
-        .logo-wrapper {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Logo */
-        .logo-img {
-            width: 70px;
-            height: auto;
-            position: relative;
-            z-index: 2;
-            display: block;
-        }
-
-        /* Loading bulat di belakang logo */
-        .loading-circle {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border: 2px solid #e0e5e3;
-            border-top-color: #1a3b34;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            z-index: 1;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Link kecil di bawah */
-        .direct-link {
-            color: #a0b4ae;
-            text-decoration: none;
-            font-size: 0.75rem;
-            display: inline-block;
-            margin-top: 25px;
-            border-bottom: 1px solid #e0e5e3;
-            padding-bottom: 2px;
-        }
-
-        .direct-link:hover {
-            color: #1a3b34;
-            border-bottom-color: #1a3b34;
-        }
-    </style>
+    <title>Pondok Pesantren Darul Abror - Modern Islamic Boarding School</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/beranda.css">
 </head>
 <body>
-    <div class="splash">
-        <div class="logo-wrapper">
-            <div class="loading-circle"></div>
-            <img src="logoda.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logoapp.png" alt="Darul Abror" class="logo-image">
+            <div class="logo-text">
+                Darul Abror
+                <small>Kedungjati-Bukateja</small>
+            </div>
+        </a>
+
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">Tentang <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="pages/tentang.html#sejarah"><i class="fas fa-history"></i> Sejarah</a>
+                    <a href="pages/tentang.html#visimisi"><i class="fas fa-bullseye"></i> Visi & Misi</a>
+                    <a href="pages/tentang.html#struktur"><i class="fas fa-sitemap"></i> Struktur Organisasi</a>
+                    <a href="pages/tentang.html#fasilitas"><i class="fas fa-building"></i> Fasilitas</a>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">Akademik <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="pages/akademik.html#ra"><i class="fas fa-child"></i> RA Darul Abror</a>
+                    <a href="pages/akademik.html#mi"><i class="fas fa-school"></i> MI Darul Abror</a>
+                    <a href="pages/akademik.html#mts"><i class="fas fa-book-open"></i> MTs Darul Abror</a>
+                    <a href="pages/akademik.html#smk"><i class="fas fa-laptop-code"></i> SMK Darul Abror</a>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">Kepesantrenan <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="pages/kepesantrenan.html#tahfidz"><i class="fas fa-quran"></i> Tahfidzul Qur'an</a>
+                    <a href="pages/kepesantrenan.html#diniyah"><i class="fas fa-mosque"></i> Diniyah Al-Amiriyah</a>
+                    <a href="pages/kepesantrenan.html#asrama"><i class="fas fa-bed"></i> Asrama</a>
+                </div>
+            </li>
+            
+            <li class="nav-item"><a href="pages/ppdb.html" class="nav-link">PPDB</a></li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">Informasi <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="pages/informasi.html#berita"><i class="fas fa-newspaper"></i> Berita</a>
+                    <a href="pages/informasi.html#pengumuman"><i class="fas fa-bullhorn"></i> Pengumuman</a>
+                    <a href="pages/informasi.html#agenda"><i class="fas fa-calendar"></i> Agenda</a>
+                    <a href="pages/informasi.html#galeri"><i class="fas fa-images"></i> Galeri</a>
+                </div>
+            </li>
+            
+            <li class="nav-item"><a href="pages/fitur/lobby.html" class="nav-link">Fitur Islami</a></li>
+            <li class="nav-item"><a href="pages/kontak.html" class="nav-link">Kontak</a></li>
+            
+            <li class="nav-item">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- SEARCH MODAL -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <h3>
+                    <i class="fas fa-search"></i>
+                    Pencarian
+                </h3>
+                <span class="shortcut">Ctrl + K</span>
+                <button class="close-modal" id="closeSearchModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Cari menu atau halaman..." autocomplete="off">
+            </div>
+            
+            <div class="search-results" id="searchResults">
+                <!-- Results will be populated here -->
+            </div>
         </div>
-        
-        <a href="https://quiet-bubblegum-53d1b5.netlify.app/" class="direct-link">Darul Abror</a>
     </div>
 
+    <!-- HERO SLIDER -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: url('assets/img/hero1.jpg');">
+            <div class="slide-content">
+                <h1>Membentuk Generasi Qurani, Berakhlak & Berprestasi</h1>
+                <p>Pendidikan Formal & Kepesantrenan Terpadu dengan Kurikulum Nasional dan Pesantren Modern</p>
+                <div class="hero-buttons">
+                    <a href="pages/ppdb.html" class="btn btn-primary">PPDB Online <i class="fas fa-arrow-right"></i></a>
+                    <a href="pages/tentang.html" class="btn btn-outline-light">Lihat Profil</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('assets/img/hero2.jpg');">
+            <div class="slide-content">
+                <h1>Tahfidz & Diniyah Terintegrasi</h1>
+                <p>Program unggulan tahfidz 30 juz dan kajian kitab kuning dengan bimbingan ustadz berpengalaman</p>
+                <div class="hero-buttons">
+                    <a href="pages/kepesantrenan.html" class="btn btn-primary">Program Unggulan</a>
+                    <a href="pages/ppdb.html" class="btn btn-outline-light">Daftar Santri</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('assets/img/hero3.jpg');">
+            <div class="slide-content">
+                <h1>Lingkungan Islami & Asri</h1>
+                <p>Kedungjati, Purbalingga – Jawa Tengah. Kawasan pesantren yang nyaman dan kondusif untuk belajar</p>
+                <div class="hero-buttons">
+                    <a href="pages/informasi.html#galeri" class="btn btn-primary">Lihat Galeri</a>
+                    <a href="pages/kontak.html" class="btn btn-outline-light">Kunjungi</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-arrow prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="slider-dots">
+            <button class="dot active" onclick="currentSlide(0)"></button>
+            <button class="dot" onclick="currentSlide(1)"></button>
+            <button class="dot" onclick="currentSlide(2)"></button>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="caption" style="color: var(--primary-600);">Tentang Kami</span>
+                <h2 class="section-title">Mengenal Lebih Dekat Darul Abror</h2>
+                <p class="section-subtitle">Pesantren modern yang memadukan nilai salaf dan pendidikan kontemporer</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="scroll-reveal">
+                    <h3 style="font-size: 1.8rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 1.5rem; line-height: 1.3;">
+                        Lebih dari 25 Tahun Mencetak Generasi Qurani
+                    </h3>
+                    
+                    <p style="color: var(--neutral-700); line-height: 1.8; margin-bottom: 2rem; font-size: 1.05rem;">
+                        Berdiri pada tahun <strong>1998</strong>, Pondok Pesantren Darul Abror telah menjadi salah satu lembaga pendidikan Islam terkemuka di Purbalingga. Berlokasi di Jl. Ach. Nachrowi RT 01 RW 07 Kedungjati, Bukateja, kami berkomitmen mencetak generasi yang unggul dalam ilmu agama, hafalan Qur'an, dan prestasi akademik.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <span style="font-size: 2.2rem; font-weight: 700; color: var(--primary); display: block;">680+</span>
+                            <span style="color: var(--neutral-600); font-size: 0.95rem;">Santri Aktif</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 2.2rem; font-weight: 700; color: var(--primary); display: block;">52</span>
+                            <span style="color: var(--neutral-600); font-size: 0.95rem;">Tenaga Pengajar</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 2.2rem; font-weight: 700; color: var(--primary); display: block;">4</span>
+                            <span style="color: var(--neutral-600); font-size: 0.95rem;">Unit Pendidikan</span>
+                        </div>
+                    </div>
+                    
+                    <a href="pages/tentang.html" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        Selengkapnya <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="grid-column: span 2;">
+                            <img src="assets/img/tentang1.jpg" alt="Pesantren Darul Abror" style="width: 100%; height: 250px; object-fit: cover; border: 1px solid var(--neutral-200); display: block;" onerror="this.src='https://placehold.co/600x400/1B4D3E/FFFFFF?text=Pesantren+Darul+Abror'">
+                        </div>
+                        <div>
+                            <img src="assets/img/tentang2.jpg" alt="Kegiatan Santri" style="width: 100%; height: 180px; object-fit: cover; border: 1px solid var(--neutral-200); display: block;" onerror="this.src='https://placehold.co/300x200/2C6E4F/FFFFFF?text=Kegiatan'">
+                        </div>
+                        <div>
+                            <img src="assets/img/tentang3.jpg" alt="Pembelajaran" style="width: 100%; height: 180px; object-fit: cover; border: 1px solid var(--neutral-200); display: block;" onerror="this.src='https://placehold.co/300x200/3DAA82/FFFFFF?text=Belajar'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="section bg-neutral-100">
+        <div class="container">
+            <div class="section-header">
+                <span class="caption" style="color: var(--primary-600);">Program Unggulan</span>
+                <h2 class="section-title">Mengapa Memilih Darul Abror?</h2>
+                <p class="section-subtitle">Program-program unggulan yang membentuk karakter dan prestasi santri</p>
+            </div>
+            
+            <div class="grid-4">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon"><i class="fas fa-quran"></i></div>
+                    <h3>Tahfidzul Qur'an</h3>
+                    <p>Hafalan mutqin 30 juz dengan metode talaqqi dan murojaah terjadwal</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon"><i class="fas fa-mosque"></i></div>
+                    <h3>Madrasah Diniyah</h3>
+                    <p>Kajian kitab kuning, nahwu shorof, fiqih, dan ilmu alat lainnya</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon"><i class="fas fa-book"></i></div>
+                    <h3>Qiroatul Kutub</h3>
+                    <p>Pemahaman mendalam kitab turats dan kemampuan membaca kitab gundul</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>Pembinaan Karakter</h3>
+                    <p>Leadership, kemandirian, adab Islami, dan kecakapan hidup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-4">
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">680+</div>
+                    <div class="stat-label">Santri Aktif</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">52</div>
+                    <div class="stat-label">Guru & Ustadz</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">2.500+</div>
+                    <div class="stat-label">Alumni</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">39</div>
+                    <div class="stat-label">Prestasi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS SECTION -->
+    <section class="section bg-neutral-100">
+        <div class="container">
+            <div class="section-header">
+                <span class="caption" style="color: var(--primary-600);">Update Terkini</span>
+                <h2 class="section-title">Berita & Kegiatan</h2>
+                <p class="section-subtitle">Informasi terbaru seputar kegiatan pondok pesantren</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="news-card scroll-reveal">
+                    <div class="news-img" style="background-image: url('assets/img/berita1.jpg');"></div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar"></i> 15 Maret 2025</span>
+                        <h3>Wisuda Akbar Tahfidz 30 Juz</h3>
+                        <p>50 santri diwisuda hafalan 30 juz, hadir langsung Kepala Kemenag Purbalingga.</p>
+                        <a href="pages/informasi.html#berita" class="read-more">Baca selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card scroll-reveal">
+                    <div class="news-img" style="background-image: url('assets/img/berita2.jpg');"></div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar"></i> 2 Maret 2025</span>
+                        <h3>Pesantren Kilat Ramadhan</h3>
+                        <p>Kegiatan pesantren kilat untuk santri dan masyarakat umum selama Ramadhan.</p>
+                        <a href="pages/informasi.html#berita" class="read-more">Baca selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card scroll-reveal">
+                    <div class="news-img" style="background-image: url('assets/img/berita3.jpg');"></div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar"></i> 18 Februari 2025</span>
+                        <h3>Juara 1 MTQ Kabupaten</h3>
+                        <p>Atas nama Ahmad Fauzi berhasil meraih juara 1 cabang tilawah mewakili pesantren.</p>
+                        <a href="pages/informasi.html#berita" class="read-more">Baca selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="pages/informasi.html#berita" class="btn btn-outline">Lihat Semua Berita <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Bergabunglah Menjadi Keluarga Besar Darul Abror</h2>
+                <p>Daftarkan putra-putri Anda sekarang. Tempat terbaik untuk mencetak generasi qurani yang berprestasi.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="pages/ppdb.html" class="btn btn-primary">Daftar PPDB Online</a>
+                    <a href="pages/kontak.html" class="btn btn-outline-light">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/img/logoapp.png" alt="Darul Abror">
+                        <span>Darul Abror</span>
+                    </div>
+                    <p class="footer-description">
+                        Mencetak generasi qurani, berakhlak mulia, dan berprestasi. Terpadu pendidikan formal & kepesantrenan dengan kurikulum nasional dan pesantren modern.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="pages/tentang.html"><i class="fas fa-chevron-right"></i> Tentang</a></li>
+                        <li><a href="pages/akademik.html"><i class="fas fa-chevron-right"></i> Akademik</a></li>
+                        <li><a href="pages/kepesantrenan.html"><i class="fas fa-chevron-right"></i> Kepesantrenan</a></li>
+                        <li><a href="pages/ppdb.html"><i class="fas fa-chevron-right"></i> PPDB</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Informasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/informasi.html#berita"><i class="fas fa-chevron-right"></i> Berita</a></li>
+                        <li><a href="pages/informasi.html#pengumuman"><i class="fas fa-chevron-right"></i> Pengumuman</a></li>
+                        <li><a href="pages/informasi.html#agenda"><i class="fas fa-chevron-right"></i> Agenda</a></li>
+                        <li><a href="pages/informasi.html#galeri"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+                        <li><a href="pages/fitur/lobby.html"><i class="fas fa-chevron-right"></i> Fitur Islami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Kontak</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Ach. Nachrowi RT 01 RW 07 Kedungjati, Bukateja, Purbalingga 53382</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+62 812-3456-7890</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@darulabror.sch.id</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Senin - Jum'at, 08:00 - 16:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Pondok Pesantren Darul Abror. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TOP BUTTON -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JAVASCRIPT -->
     <script>
-        setTimeout(() => {
-            window.location.href = "https://quiet-bubblegum-53d1b5.netlify.app/";
-        }, 1700);
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Mobile dropdown
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const dropdown = item.querySelector('.dropdown-content');
+            
+            if (dropdown) {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                        
+                        navItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        // Hero slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let slideIndex = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+            
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            slideIndex = index;
+        }
+
+        function changeSlide(direction) {
+            slideIndex += direction;
+            showSlide(slideIndex);
+            resetInterval();
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+            slideIndex = index;
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => {
+                slideIndex++;
+                showSlide(slideIndex);
+            }, 5000);
+        }
+
+        slideInterval = setInterval(() => {
+            slideIndex++;
+            showSlide(slideIndex);
+        }, 5000);
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        
+        function checkReveal() {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('revealed');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkReveal);
+        window.addEventListener('load', checkReveal);
+
+        // Scroll to top
+        const scrollTop = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Search modal functionality
+        const searchModal = document.getElementById('searchModal');
+        const searchBtn = document.getElementById('searchBtn');
+        const closeSearchBtn = document.getElementById('closeSearchModal');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        const menuData = [
+            { name: 'Beranda', url: 'index.html', icon: 'fas fa-home', category: 'Halaman Utama' },
+            { name: 'Sejarah', url: 'pages/tentang.html#sejarah', icon: 'fas fa-history', category: 'Tentang' },
+            { name: 'Visi & Misi', url: 'pages/tentang.html#visimisi', icon: 'fas fa-bullseye', category: 'Tentang' },
+            { name: 'Struktur Organisasi', url: 'pages/tentang.html#struktur', icon: 'fas fa-sitemap', category: 'Tentang' },
+            { name: 'Fasilitas', url: 'pages/tentang.html#fasilitas', icon: 'fas fa-building', category: 'Tentang' },
+            { name: 'RA Darul Abror', url: 'pages/akademik.html#ra', icon: 'fas fa-child', category: 'Akademik' },
+            { name: 'MI Darul Abror', url: 'pages/akademik.html#mi', icon: 'fas fa-school', category: 'Akademik' },
+            { name: 'MTs Darul Abror', url: 'pages/akademik.html#mts', icon: 'fas fa-book-open', category: 'Akademik' },
+            { name: 'SMK Darul Abror', url: 'pages/akademik.html#smk', icon: 'fas fa-laptop-code', category: 'Akademik' },
+            { name: 'Tahfidzul Qur\'an', url: 'pages/kepesantrenan.html#tahfidz', icon: 'fas fa-quran', category: 'Kepesantrenan' },
+            { name: 'Diniyah', url: 'pages/kepesantrenan.html#diniyah', icon: 'fas fa-mosque', category: 'Kepesantrenan' },
+            { name: 'Asrama', url: 'pages/kepesantrenan.html#asrama', icon: 'fas fa-bed', category: 'Kepesantrenan' },
+            { name: 'PPDB', url: 'pages/ppdb.html', icon: 'fas fa-graduation-cap', category: 'Pendaftaran' },
+            { name: 'Berita', url: 'pages/informasi.html#berita', icon: 'fas fa-newspaper', category: 'Informasi' },
+            { name: 'Pengumuman', url: 'pages/informasi.html#pengumuman', icon: 'fas fa-bullhorn', category: 'Informasi' },
+            { name: 'Agenda', url: 'pages/informasi.html#agenda', icon: 'fas fa-calendar', category: 'Informasi' },
+            { name: 'Galeri', url: 'pages/informasi.html#galeri', icon: 'fas fa-images', category: 'Informasi' },
+            { name: 'Fitur Islami', url: 'pages/fitur/lobby.html', icon: 'fas fa-mosque', category: 'Fitur' },
+            { name: 'Kontak', url: 'pages/kontak.html', icon: 'fas fa-phone-alt', category: 'Informasi' }
+        ];
+
+        function openSearchModal() {
+            searchModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            searchInput.focus();
+            searchInput.value = '';
+            showAllResults();
+        }
+
+        function closeSearchModal() {
+            searchModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function performSearch(query) {
+            query = query.toLowerCase().trim();
+            
+            if (query === '') {
+                showAllResults();
+                return;
+            }
+
+            const filtered = menuData.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query)
+            );
+
+            displayResults(filtered, query);
+        }
+
+        function showAllResults() {
+            displayResults(menuData.slice(0, 6), '');
+        }
+
+        function displayResults(results, query) {
+            if (results.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <p>Tidak ditemukan hasil untuk "${query}"</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            results.forEach(item => {
+                html += `
+                    <a href="${item.url}" class="search-result-item" onclick="closeSearchModal()">
+                        <i class="${item.icon}"></i>
+                        <div class="result-content">
+                            <h4>${item.name}</h4>
+                            <p>${item.category}</p>
+                        </div>
+                        <span class="result-badge">${item.category}</span>
+                    </a>
+                `;
+            });
+
+            searchResults.innerHTML = html;
+        }
+
+        if (searchBtn) {
+            searchBtn.addEventListener('click', openSearchModal);
+        }
+
+        if (closeSearchBtn) {
+            closeSearchBtn.addEventListener('click', closeSearchModal);
+        }
+
+        if (searchModal) {
+            searchModal.addEventListener('click', (e) => {
+                if (e.target === searchModal) {
+                    closeSearchModal();
+                }
+            });
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                performSearch(e.target.value);
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                if (searchModal && searchModal.classList.contains('active')) {
+                    closeSearchModal();
+                } else {
+                    openSearchModal();
+                }
+            }
+
+            if (e.key === 'Escape' && searchModal && searchModal.classList.contains('active')) {
+                closeSearchModal();
+            }
+        });
     </script>
 </body>
 </html>
