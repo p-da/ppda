@@ -1,237 +1,106 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darul Abror • Loading</title>
-    
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<title>Logo Loader</title>
 
-        body {
-            background: #fcf7f0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.5;
-            color: #2d3e3a;
-        }
+<style>
 
-        .loader {
-            text-align: center;
-            padding: 2rem;
-            max-width: 400px;
-            width: 100%;
-        }
+body{
+background:#1b6d4f;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh; /* ketinggian logo dari bawah */
+margin:0;
+}
 
-        /* Logo container */
-        .logo-container {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2.5rem;
-        }
+.logo{
+width:100px;
+}
 
-        .logo {
-            width: 100%;
-            height: 100%;
-            animation: float 3s ease-in-out infinite;
-        }
+/* garis berjalan */
 
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 10px 20px rgba(27, 77, 62, 0.15));
-        }
+.logo path{
 
-        /* Brand text */
-        .brand {
-            margin-bottom: 2.5rem;
-        }
+fill:none;
+stroke:#fcf7f0;  /* garis cream */
+stroke-width:.5;
 
-        .brand-super {
-            font-size: 0.4rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #9aa9a4;
-            margin-bottom: 0.25rem;
-        }
+stroke-linecap:round;
+stroke-linejoin:round;
 
-        .brand-main {
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: #1B4D3E;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
-        }
+/* panjang garis sama */
 
-        /* Minimalist square dots loader */
-        .dots-loader {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-            margin-bottom: 2rem;
-        }
+stroke-dasharray:60 65;
 
-        .dot {
-            width: 4px;
-            height: 4px;
-            background: #1B4D3E;
-            opacity: 0.2;
-            animation: minimalistPulse 1.2s ease-in-out infinite;
-        }
+/* posisi awal */
 
-        .dot:nth-child(1) {
-            animation-delay: 0s;
-        }
+stroke-dashoffset:0;
 
-        .dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
+/* animasi loop */
 
-        .dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
+animation:moveLine 2s linear infinite;
 
-        @keyframes minimalistPulse {
-            0%, 100% {
-                opacity: 0.2;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-        }
+}
 
-        /* Fade in animation */
-        .fade-in {
-            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-            opacity: 0;
-        }
+/* animasi garis berjalan */
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes moveLine{
 
-        /* Delayed animations */
-        .logo-container { animation-delay: 0.1s; }
-        .brand { animation-delay: 0.3s; }
-        .dots-loader { animation-delay: 0.5s; }
+from{
+stroke-dashoffset:0;
+}
 
-        /* Floating animation for logo */
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-6px);
-            }
-        }
+to{
+stroke-dashoffset:-120;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .logo-container {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .brand-main {
-                font-size: 1.2rem;
-            }
-        }
+}
 
-        @media (max-width: 480px) {
-            .logo-container {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 2rem;
-            }
-            
-            .brand-super {
-                font-size: 0.65rem;
-                letter-spacing: 1.5px;
-            }
-            
-            .brand-main {
-                font-size: 1.1rem;
-            }
-            
-            .dot {
-                width: 3px;
-                height: 3px;
-            }
-        }
-    </style>
+.loading{
+color:#fcf7f0;
+font-family:sans-serif;
+font-size:12px;
+letter-spacing:4px;
+margin-top:22px;
+text-align:center;
+animation:blink 2s linear infinite;
+}
+
+@keyframes blink{
+
+0%,100%{opacity:.35}
+50%{opacity:1}
+
+}
+
+</style>
 </head>
-<body>
-    <div class="loader">
-        <!-- Logo -->
-        <div class="logo-container fade-in">
-            <div class="logo">
-                <img src="logoda.png" alt="Darul Abror" onerror="this.src='https://placehold.co/400x400/1B4D3E/FFFFFF?text=DA'">
-            </div>
-        </div>
-        
-        <!-- Brand text - fixed hierarchy -->
-        <div class="brand fade-in">
-            <div class="brand-super">YAYASAN PONDOK PESANTREN</div>
-            <div class="brand-main">Darul Abror</div>
-        </div>
-        
-        <!-- Minimalist square dots loader -->
-        <div class="dots-loader fade-in">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div>
 
-    <script>
-        (function() {
-            const redirectUrl = "https://quiet-bubblegum-53d1b5.netlify.app/";
-            const delay = 2500;
-            
-            // Pre-connect to target domain
-            const preconnect = document.createElement('link');
-            preconnect.rel = 'preconnect';
-            preconnect.href = new URL(redirectUrl).origin;
-            document.head.appendChild(preconnect);
-            
-            // Set redirect
-            setTimeout(function() {
-                window.location.href = redirectUrl;
-            }, delay);
-            
-            // Fallback logo
-            const logoImg = document.querySelector('.logo img');
-            logoImg.addEventListener('error', function() {
-                this.src = 'https://placehold.co/400x400/1B4D3E/FFFFFF?text=DA';
-                this.style.background = 'transparent';
-            });
-            logoImg.style.background = 'transparent';
-        })();
-    </script>
+<body>
+
+<div>
+
+<svg class="logo" viewBox="0 0 21 21">
+
+<path d="M5.9258 4.0285c-0.1742 0.2673-0.2695 0.4678-0.2961 0.8583-2.169-0.3193-3.5005 2.1809-5.1697 3.0545-0.1245 0.0653-0.2556 0.1103-0.391 0.1767 0.004 0.0219 0.2626 0.5006 0.3409 0.7061 0.7463 1.959 0.3185 3.9391 2.2418 5.1907-0.0597 0.188-0.201 0.2583-0.2475 0.7438-0.1815 1.8983 1.5478 3.8507 1.6067 5.551 0.2869-0.0231 0.3726-0.113 0.978-0.1222 1.4138-0.0216 3.6669 0.6169 5.0132-0.1581 0.3037-0.1749 0.3176-0.2988 0.4267-0.3619 0.1091 0.0631 0.123 0.187 0.4267 0.3619 1.3463 0.775 3.5993 0.1365 5.0132 0.1581 0.6053 0.0092 0.6911 0.0991 0.9779 0.1222 0.0589-1.7003 1.7883-3.6527 1.6068-5.551-0.0465-0.4855-0.1878-0.5558-0.2476-0.7438 1.9234-1.2516 1.4956-3.2317 2.2419-5.1907 0.0783-0.2055 0.3369-0.6842 0.3408-0.7061-0.1353-0.0664-0.2665-0.1114-0.391-0.1767-1.6691-0.8736-3.0006-3.3738-5.1696-3.0545-0.0266-0.3905-0.1219-0.591-0.2961-0.8583-0.1395-0.2139-0.3526-0.4618-0.5183-0.6131-0.3918-0.3577-0.7814-0.6431-1.3024-0.9607-0.9123-0.5562-1.8174-0.927-2.5526-1.7123-0.0527-0.0562-0.0663-0.0936-0.1297-0.1462-0.0634 0.0526-0.0771 0.09-0.1297 0.1462-0.7352 0.7853-1.6403 1.1561-2.5526 1.7123-0.521 0.3176-0.9106 0.603-1.3024 0.9607-0.1657 0.1513-0.3789 0.3992-0.5183 0.6131z"/>
+
+</svg>
+
+<div class="loading">
+Darul Abror
+</div>
+
+</div>
+
+<script>
+
+setTimeout(()=>{
+window.location.href="https://quiet-bubblegum-53d1b5.netlify.app/";
+},3000);
+
+</script>
+
 </body>
 </html>
